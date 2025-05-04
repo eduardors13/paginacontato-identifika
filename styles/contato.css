@@ -63,7 +63,9 @@
 
 .formulario {
   h2{
+    text-align: center;
     font: var(--h2);
+    margin-bottom: 20px;
   }
 
   width: 90%;
