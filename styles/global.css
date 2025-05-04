@@ -1,0 +1,46 @@
+/* ========================================================= */
+/* >>> RESET GERAL <<<                                       */
+/* ========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================================= */
+/* >>> CORPO DO TEXTO <<<                                       */
+/* ========================================================= */
+:root{
+  --bg-color: #11b965;
+
+   --font-family: 'Poppins', sans-serif;
+
+  --h1: 800 48px/140% var(--font-family);
+  --h2: 800 36px/140% var(--font-family);
+  --h3: 800 30px/140% var(--font-family);
+  --p: 400 20px/140% var(--font-family);
+  --destaque: 800 20px/140% var(--font-family);
+}
+
+html, body {
+  display: grid;
+  width: 100%;
+  padding: 1px;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+
+  
+}
+
+main{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+
+.grid-flow-col{
+  grid-auto-flow: column ;
+}

@@ -1,0 +1,51 @@
+.conteudo-contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.topo-contato {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+
+.canais, .logo-slogan {
+  flex: 1;
+  padding: 20px;
+}
+
+.logo-slogan img {
+  max-width: 100%;
+  height: auto;
+}
+
+.formulario {
+  width: 90%;
+  max-width: 800px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
