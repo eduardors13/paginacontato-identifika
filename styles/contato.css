@@ -5,10 +5,14 @@
 }
 
 .contatos{
+  margin-top:35px;
   h1{
     text-shadow: 3px 3px 3px rgba(63, 63, 63, 0.5);
+    font: var(--h1);
+    margin-bottom: 10px;
   }
 }
+
 .conteudo-contato {
   display: flex;
   flex-direction: column;
@@ -17,31 +21,31 @@
   padding: 40px 0;
 
   .h1{
-    font:var(--h1);
+    font: var(--h1);
     text-align: center;
   }
   .h2{
-    font:var(--h2);
+    font: var(--h2);
   }
 
   
 }
 
 .topo-contato {
-    display: flex;
+  display: flex;
   justify-content: space-between;
   width: 90%;
   max-width: 1200px;
   margin-bottom: 150px;
   text-align: center;
-  padding:8px; 
+  padding: 8px; 
 
-  .h1{
-    font: var(--h1);
-  }
 }
 
 .email, .telefone, .whatsapp{
+  h3{
+    font: var(--h3);
+  }
   display: flex;
   align-items: center;
   gap: 5px;
@@ -50,17 +54,18 @@
   }
 }
 .logo-slogan {
+  margin-top:40px;
   img {
-    width: 500px;
+    width: 600px;
     height: auto;
   }
 }
 
 .formulario {
   h2{
-    font:var(--h2);
-  
+    font: var(--h2);
   }
+
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
@@ -76,7 +81,6 @@ form {
 input, textarea {
   font: var(--p);
   padding: 10px;
-  font-size: 1rem;
   width: 100%;
 }
 
