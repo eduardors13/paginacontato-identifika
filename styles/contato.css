@@ -1,51 +1,104 @@
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 40px; 
+}
+
+.contatos{
+  h1{
+    text-shadow: 3px 3px 3px rgba(63, 63, 63, 0.5);
+  }
+}
 .conteudo-contato {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 40px 0;
+
+  .h1{
+    font:var(--h1);
+    text-align: center;
+  }
+  .h2{
+    font:var(--h2);
+  }
+
+  
 }
 
 .topo-contato {
-  display: flex;
+    display: flex;
   justify-content: space-between;
   width: 90%;
   max-width: 1200px;
-  margin-bottom: 40px;
+  margin-bottom: 150px;
+  text-align: center;
+  padding:8px; 
+
+  .h1{
+    font: var(--h1);
+  }
 }
 
-.canais, .logo-slogan {
-  flex: 1;
-  padding: 20px;
+.email, .telefone, .whatsapp{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  img{
+    width:40px;
+  }
 }
-
-.logo-slogan img {
-  max-width: 100%;
-  height: auto;
+.logo-slogan {
+  img {
+    width: 500px;
+    height: auto;
+  }
 }
 
 .formulario {
+  h2{
+    font:var(--h2);
+  
+  }
   width: 90%;
   max-width: 800px;
+  margin: 0 auto;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  align-items: center;
 }
 
 input, textarea {
+  font: var(--p);
   padding: 10px;
   font-size: 1rem;
   width: 100%;
 }
 
 button {
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
+  font: var(--p);
+  padding: 6px 14px;
+  background-color: white;
+  color: black;
   font-weight: bold;
-  border: none;
+  border: 1px solid;
   cursor: pointer;
+  border-radius: 20px;
+  width: 200px;
+  height: auto;
+  text-decoration: none;
+  border: 2px solid black;
+  transition: background-color 0.3s;
 }
+
+button:hover{
+  background-color: #d7faed;
+  border-color: #11b965;
+  color: #0065c6;
+}
+
