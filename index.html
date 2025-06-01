@@ -14,31 +14,35 @@
 </head>
 <body>
   <!-- TOPO -->
-  <header>
-    <div class="header-container">
-      <!-- BLOCO ESQUERDA: Logo + Lupa -->
-      <div class="logo-pesquisa">
-        <img src="images/logo.png" alt="Logo IDentifika" class="logo-img">
-        <div class="pesquisa-container">
-          <button class="lupa-btn" id="lupaBtn">🔍</button>
-          <input type="text" id="campoBusca" class="campo-busca" placeholder="Buscar...">
+    <header>
+        <div class="header-container">
+            <!-- BLOCO ESQUERDA: Logo + Lupa -->
+            <div class="logo-pesquisa">
+               <a href="/pmv-ads-2025-1-e1-proj-web-t14-identifika/codigo-fonte/paginaInicial/index.html">
+                  <img src="../images/logo.png" alt="Logo IDentifika" class="logo-img">        
+               </a>
+
+                <div class="pesquisa-container">
+                    <button class="lupa-btn" id="lupaBtn">🔍</button>
+                    <input type="text" class="campo-busca" placeholder="Buscar...">
+                </div>
+            </div>
+
+            <!-- BLOCO CENTRAL: Botões -->
+        <nav class="menu-central">
+            <a href="../paginaSolucoes/solucoes.html">Soluções</a>
+            <a href="../pagina-quemsomos/quemSomos.html">Quem Somos</a>
+            <a href="../pagina-contato/contato.html">Contato</a>
+        </nav>
+
+            <!-- BLOCO DIREITA: Cadastrar/Login -->
+         <div class="menu-direita">
+            <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t14-identifika/codigo-fonte/pagina-cadastro/pagina-cadastro.html">Cadastrar-se</a> <!-- se for criado depois -->
+            <a href="../pasta-login/login.html">Login</a>
         </div>
-      </div>
-
-      <!-- BLOCO CENTRAL: Botões centrais -->
-      <nav class="menu-central">
-        <a href="solucoes.html">Soluções</a>
-        <a href="quemsomos.html">Quem Somos</a>
-        <a href="contato.html">Contato</a>
-      </nav>
-
-      <!-- BLOCO DIREITA: Cadastrar/Login -->
-      <div class="menu-direita">
-        <a href="cadastro.html">Cadastrar-se</a>
-        <a href="login.html">Login</a>
-      </div>
     </div>
-  </header>
+    </header>
+
   <main>
     <div class="conteudo-contato container">
       <div class="topo-contato">
@@ -64,20 +68,25 @@
       
         <div class="formulario">
           <h2>Deixa que nós entramos em contato com você!</h2>
-          <form action="">
+          <form action="" id="form-contato">
             
-            <input type="text" name="nome" placeholder="Seu nome">
-            <input type="text" name="telefone" placeholder="Seu telefone">
-            <input type="text" name="mail" placeholder="Seu e-mail"
+            <input type="text" name="name" id="name" placeholder="Seu nome" >
+            <input type="tel" name="tellphone" id="tellphone" placeholder="Seu telefone" pattern="[0-9]{8,15}" title="Digite apenas números (entre 8 e 15 dígitos)" required>
+            <input type="email" name="mail" id="email" placeholder="Seu e-mail"
             minlength="10"
-            pattern=".+@.+/.com">
-            <input type="text" name="assunto" placeholder="Digite o assunto desejado"
+            required>
+            <input type="text" name="subject"  id="subject" placeholder="Digite o assunto desejado"
             minlength="10"
             maxlength="25">
-            <textarea name="comentario" placeholder="Discorra brevemente o assunto. Máx.: 255 caracteres" minlength="10" maxlength="255"></textarea>
+            <textarea name="comment" id="comment" placeholder="Discorra brevemente o assunto. Máx.: 255 caracteres" minlength="10" maxlength="255"></textarea>
             <button>Enviar solicitação</button>
             
-          </form>       
+          </form>     
+          
+          <div id="mensagem-sucesso" style="display: none; color: green; margin-top: 10px; text-align: center; font-weight: bold;">
+            Solicitação enviada com sucesso!
+          </div>
+          
         </div>
       
     </div>
@@ -111,5 +120,31 @@
     </div>
   </footer>
   
+
+
+  <script>
+    document.getElementById("form-contato").addEventListener("submit", function (e) {
+      e.preventDefault(); // Impede envio automático
+
+      // Pega os valores
+      const nome = document.getElementById("name").value.trim();
+      const telefone = document.getElementById("tellphone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const assunto = document.getElementById("subject").value.trim();
+      const mensagem = document.getElementById("comment").value.trim();
+
+      // Validação básica
+      if (!nome || !telefone || !email || !assunto || !mensagem) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+      }
+
+      // Mostrar mensagem de sucesso
+      document.getElementById("mensagem-sucesso").style.display = "block";
+
+      // Limpar formulário
+      this.reset();
+    });
+</script>
  </body>
 </html>
